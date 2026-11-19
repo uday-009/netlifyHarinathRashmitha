@@ -14,4 +14,4 @@ No server, no Node, no build. Just static files - host anywhere (Netlify, Cloudf
 Zip the folder contents (index.html must be at the top level of the zip, or drag the folder itself) and drop it on app.netlify.com/drop.
 
 ## Settings (top of script.js)
-GROOM_WHATSAPP (RSVP number), STORY_VIDEO_ID (YouTube video id)
+GROOM_WHATSAPP (RSVP number), STORY_VIDEO_ID (YouTube story video id), STREAM_VIDEO_ID (wedding live stream video id)

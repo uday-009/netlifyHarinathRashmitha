@@ -1,6 +1,7 @@
 /* ===== CONFIG ===== */
 const GROOM_WHATSAPP='919908598014';  // groom's WhatsApp number with country code, digits only e.g. '919XXXXXXXXX'
 const STORY_VIDEO_ID='eMo3JXrWsC4';  // YouTube video ID of your story video (the part after v= in the link)
+const STREAM_VIDEO_ID='YZH9Jt8rbOo';  // YouTube video ID of the wedding live stream
 const SCROLL_SPEED=40;    // px per second
 const WEDDING=new Date('2026-11-20T10:57:00+05:30');
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -72,6 +73,10 @@ const sv=$('#vid');
 if(STORY_VIDEO_ID){sv.innerHTML=`<img src="https://i.ytimg.com/vi/${STORY_VIDEO_ID}/hqdefault.jpg" alt="Our story video"><button type="button" aria-label="Play video"></button>`;
  sv.addEventListener('click',()=>{music.pause();setIcon(false);sv.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${STORY_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Our story"></iframe>`},{once:true})}
 else sv.innerHTML='<iframe class="" width="560" height="315" src="https://www.youtube.com/embed/eMo3JXrWsC4?si=V8axZR5FyylMH3FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+/* ===== stream  video (YouTube) ===== */
+const st=$('#stream');
+st.innerHTML=`<img src="https://i.ytimg.com/vi/${STREAM_VIDEO_ID}/hqdefault.jpg" alt="Wedding live stream"><button type="button" aria-label="Play live stream"></button>`;
+st.addEventListener('click',()=>{music.pause();setIcon(false);st.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${STREAM_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Wedding live stream"></iframe>`},{once:true});
 
 /* ===== share ===== */
 const url=location.href.split('?')[0],msg='You are invited to the wedding of Harinath & Rashmitha - Friday, 20 Nov 2026, Sri Jagathi Gardens, Hanamkonda. ';
